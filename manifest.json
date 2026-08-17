@@ -1,10 +1,11 @@
 {
-  "name": "My Resume App",
+  "name": "Resume - Chan Myae Thaw",
   "short_name": "Resume",
+  "description": "Digital Technology Innovation student resume and project showcase application.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#3182ce",
   "icons": [
     {
       "src": "https://via.placeholder.com/192",
