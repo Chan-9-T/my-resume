@@ -1,0 +1,52 @@
+body{
+    background-color:#F5F5F5;
+    font-family:Arial, sans-serif;
+}
+
+.container{
+    width:800px;
+    margin:auto;
+    background:white;
+    padding:15px;
+}
+
+.header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+h1,h2,h3{
+    margin:10px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:1px solid #999;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+th,td{
+    padding:8px;
+}
+
+hr{
+    margin:20px 0;
+}
+
+ul{
+    line-height:1.8;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+}

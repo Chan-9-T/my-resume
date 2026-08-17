@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distance Calculator</title>
+</head>
+<body>
+
+    <h2>How Far from University?</h2>
+
+    <label>Enter X coordinate: </label>
+    <input type="number" id="x_val"><br><br>
+
+    <label>Enter Y coordinate: </label>
+    <input type="number" id="y_val"><br><br>
+
+    <button onclick="calculateDistance()">Check Distance</button>
+    <br><br>
+
+    <h3 id="result"></h3>
+
+    <!-- Back Button to return to Resume -->
+    <button onclick="window.location.href='resume.html'">Back</button>
+
+    <script>
+        function calculateDistance() {
+            let xInput = document.getElementById("x_val").value;
+            let yInput = document.getElementById("y_val").value;
+
+            // Input Validation
+            if (xInput === "" || yInput === "") {
+                document.getElementById("result").innerText = "Please fill in both coordinates.";
+                return;
+            }
+
+            let x = parseFloat(xInput);
+            let y = parseFloat(yInput);
+
+            if (isNaN(x) || isNaN(y)) {
+                document.getElementById("result").innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            // Distance Formula: sqrt(x^2 + y^2)
+            let distance = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+
+            document.getElementById("result").innerText = "You've " + distance.toFixed(2) + " km far from University.";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Measurement Converter</title>
+</head>
+<body>
+
+    <h2>Measurement Converter (Meters to Feet)</h2>
+
+    <label>Enter length in meters: </label>
+    <input type="number" id="meters" min="0">
+
+    <button onclick="convert()">Convert</button>
+
+    <h3 id="result"></h3>
+
+    <!-- Back Button -->
+    <button onclick="window.location.href='resume.html'">Back</button>
+
+    <script>
+        function convert() {
+            let inputVal = document.getElementById("meters").value;
+
+            // Input Validation
+            if (inputVal === "") {
+                document.getElementById("result").innerText = "Please enter a value.";
+                return;
+            }
+
+            let meters = parseFloat(inputVal);
+
+            if (isNaN(meters) || meters < 0) {
+                document.getElementById("result").innerText = "Please enter a valid positive number.";
+                return;
+            }
+
+            // Conversion: 1 meter = 3.28084 feet
+            let feet = meters * 3.28084;
+
+            document.getElementById("result").innerText = meters + " meters = " + feet.toFixed(2) + " feet";
+        }
+    </script>
+
+</body>
+</html>
