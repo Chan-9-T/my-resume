@@ -4,6 +4,11 @@
 <head>
     <title>Resume - Chan Myae Thaw</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest Link -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3182ce">
+
     <style>
         .assignment-btn {
             display: block;
@@ -143,6 +148,15 @@ A motivated second-year Digital Technology Innovation student at Kasem Bundit Un
 </div>
 
 </div>
+
+<!-- PWA Service Worker Registration Script -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('Service Worker registered successfully!'))
+      .catch(err => console.log('Service Worker registration failed: ', err));
+  }
+</script>
 
 </body>
 </html>
